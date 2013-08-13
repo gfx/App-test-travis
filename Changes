@@ -2,6 +2,10 @@ Revision history for Perl extension App-test-travis
 
 {{$NEXT}}
 
+v0.9.4 2013-08-13T07:43:52Z
+
+    - Fix configuration for clojure (mooz++)
+
 v0.9.3 2013-08-13T01:12:09Z
 
     - Move the code from the script file to the module file

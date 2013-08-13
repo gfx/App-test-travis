@@ -69,8 +69,9 @@
          "web" : "https://github.com/gfx/App-test-travis"
       }
    },
-   "version" : "v0.9.3",
+   "version" : "v0.9.4",
    "x_contributors" : [
-      "Fuji, Goro <g.psy.va@gmail.com>"
+      "Fuji, Goro <g.psy.va@gmail.com>",
+      "mooz <stillpedant@gmail.com>"
    ]
 }
