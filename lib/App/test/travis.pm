@@ -3,7 +3,7 @@ use 5.10.0;
 use strict;
 use warnings;
 
-use version; our $VERSION = version->declare("v0.9.2");
+use version; our $VERSION = version->declare("v0.9.3");
 
 use encoding::warnings 'FATAL';
 use Fatal qw(open close);
@@ -11,7 +11,7 @@ use Fatal qw(open close);
 use File::Temp qw(tempdir);
 use Config qw(%Config);
 use File::Spec ();
-use Getopt::Long qw(:config posix_default no_ignore_case bundling auto_version);
+use Getopt::Long qw(GetOptionsFromArray :config posix_default no_ignore_case bundling auto_version);
 use autouse 'Pod::Usage' => qw(pod2usage);
 use autouse 'Pod::Find'  => qw(pod_where);
 use YAML ();
@@ -91,19 +91,20 @@ my %tab = (
 );
 
 sub run {
-    my($lclass, @args) = @_;
+    my($class, @args) = @_;
+
+    my $start = time();
 
     my $DRY_RUN;
     my $HELP;
 
-    GetOptionsFromArray(\@args
+    GetOptionsFromArray(\@args,
         '--dry-run' => \$DRY_RUN,
         '--help'    => \$HELP,
-    ) or help(1);
-    help(0) if $HELP;
+    ) or return help(1);
+    return help(0) if $HELP;
 
-    my $start = time();
-
+    my($travis_yml) = @args;
     $travis_yml //= '.travis.yml';
 
     my $config = YAML::LoadFile($travis_yml);
@@ -154,6 +155,7 @@ sub run {
             say sprintf '# duration: %d sec', $duration;
         }
     });
+    return 0;
 }
 
 sub run_commands {
@@ -179,9 +181,12 @@ sub xsystem {
 
 sub help {
     my($exit_status) = @_;
+    my $pod_file = pod_where({ -inc => 1 }, __PACKAGE__);
     pod2usage(
-        -exitval => $exit_status,
+        -exitval => 'noexit',
+        -input   => $pod_file,
     );
+    return $exit_status;
 }
 1;
 __END__

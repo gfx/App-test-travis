@@ -2,8 +2,10 @@ use strict;
 use warnings;
 use Test::More;
 
+use App::test::travis;
+
 for my $config(glob('t/lang/*.yml')) {
-    is system($^X, 'bin/test-travis', '--dry-run', $config), 0, $config;
+    is(App::test::travis->run('--dry-run', $config), 0, $config);
 }
 
 done_testing;
