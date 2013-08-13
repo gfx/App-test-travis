@@ -25,7 +25,7 @@ my %tab = (
     cpp => {
         script => './configure && make && make test',
     },
-    closure => {
+    clojure => {
         script => 'lein test',
     },
     elang => {
