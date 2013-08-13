@@ -14,7 +14,7 @@ use autouse 'Pod::Usage' => qw(pod2usage);
 use autouse 'Pod::Find'  => qw(pod_where);
 use YAML ();
 
-use version; our $VERSION = version->declare('v0.9.0');
+use version; our $VERSION = version->declare('v0.9.1');
 
 my $DRY_RUN;
 my $HELP;
