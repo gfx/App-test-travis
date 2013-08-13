@@ -1,5 +1,4 @@
 #!perl
-package App::test::travis;
 use 5.10.0;
 use strict;
 use warnings;
@@ -14,7 +13,7 @@ use autouse 'Pod::Usage' => qw(pod2usage);
 use autouse 'Pod::Find'  => qw(pod_where);
 use YAML ();
 
-use version; our $VERSION = version->declare('v0.9.1');
+use version; our $VERSION = version->declare('v0.9.2');
 
 my $DRY_RUN;
 my $HELP;
@@ -181,7 +180,7 @@ sub xsystem {
 
 sub help {
     my($exit_status) = @_;
-    my $pod_file = pod_where({ -inc => 1 }, __PACKAGE__) or die;
+    my $pod_file = pod_where({ -inc => 1 }, 'App::test::travis') or die;
     pod2usage(
         -exitval => $exit_status,
         -input   => $pod_file,
