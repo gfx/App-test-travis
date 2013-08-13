@@ -2,6 +2,10 @@ Revision history for Perl extension App-test-travis
 
 {{$NEXT}}
 
+v0.9.3 2013-08-13T01:12:09Z
+
+    - Move the code from the script file to the module file
+
 v0.9.2 2013-08-13T00:56:12Z
 
     - Fix a packaging issue to list bin/test-travis in MetaCPAN
