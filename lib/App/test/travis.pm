@@ -14,9 +14,19 @@ __END__
 
 App::test::travis - Runs Travis-CI scripts (.travis.yml)
 
-=head1 SYNOPSIS
+=head1 USAGE
 
-    # see test-travis(1)
+    test-travis [--dry-run] [.travis.yml]
+
+=head1 DESCRIPTION
+
+C<test-travis(1)> is a helper script which runs scripts defined in F<.travis.yml>, emulating Travis-CI environments.
+
+Note that the actual Travis-CI runs projects on Linux, so Linux specific commands like C<apt-get(1)> won't work.
+
+=head1 SEE ALSO
+
+L<http://about.travis-ci.org/docs/user/getting-started/>
 
 =head1 LICENSE
 
