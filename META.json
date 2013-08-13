@@ -47,7 +47,8 @@
             "Getopt::Long" : "0",
             "Pod::Usage" : "0",
             "YAML" : "0",
-            "perl" : "v5.10.0"
+            "perl" : "v5.10.0",
+            "version" : "0.77"
          }
       },
       "test" : {
@@ -57,6 +58,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/gfx/App-test-travis/issues"
+      },
+      "homepage" : "https://github.com/gfx/App-test-travis",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/gfx/App-test-travis.git",
+         "web" : "https://github.com/gfx/App-test-travis"
+      }
+   },
    "version" : "v0.9.0",
    "x_contributors" : [
       "Fuji, Goro <g.psy.va@gmail.com>"
