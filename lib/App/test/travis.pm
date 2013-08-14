@@ -28,7 +28,7 @@ my %tab = (
     clojure => {
         script => 'lein test',
     },
-    elang => {
+    erlang => {
         install => 'rebar get-deps',
         script => 'rebar compile && rebar skip_deps=true eunit',
     },
