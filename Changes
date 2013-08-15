@@ -2,6 +2,12 @@ Revision history for Perl extension App-test-travis
 
 {{$NEXT}}
 
+v0.9.5 2013-08-15T06:49:09Z
+
+    - Handle more build lifecycle: after_success, after_failure, after_script
+      (hhatto++)
+    - Fix a typo for erlang projects (hhatto++)
+
 v0.9.4 2013-08-13T07:43:52Z
 
     - Fix configuration for clojure (mooz++)
