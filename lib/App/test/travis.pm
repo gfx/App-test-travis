@@ -77,6 +77,10 @@ my %tab = (
     },
 
     python => {
+        setup => sub {
+            my($config, $tempdir, $cb) = @_;
+            $cb->();
+        },
         install => 'pip install -r requirements.txt --use-mirrors',
     },
 
