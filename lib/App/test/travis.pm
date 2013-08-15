@@ -144,6 +144,9 @@ sub run {
         run_commands($config, $DRY_RUN, 'install');
         run_commands($config, $DRY_RUN, 'before_script');
         run_commands($config, $DRY_RUN, 'script');
+        run_commands($config, $DRY_RUN, 'after_success');
+        run_commands($config, $DRY_RUN, 'after_failure');
+        run_commands($config, $DRY_RUN, 'after_script');
 
         say '# finished: ', scalar localtime;
 
