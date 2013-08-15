@@ -16,6 +16,8 @@ Note that the actual Travis-CI runs projects on Linux, so Linux specific command
 
 [http://about.travis-ci.org/docs/user/getting-started/](http://about.travis-ci.org/docs/user/getting-started/)
 
+[http://about.travis-ci.org/docs/user/build-configuration/\#Build-Lifecycle](http://about.travis-ci.org/docs/user/build-configuration/\#Build-Lifecycle) for the build lifecycle
+
 # LICENSE
 
 Copyright (C) Fuji, Goro (gfx) <gfuji@cpan.org>.
