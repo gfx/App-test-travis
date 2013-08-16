@@ -137,7 +137,7 @@ sub run {
         $config->{$mode} //= $behavior->{$mode};
     }
 
-    $behavior->{setup}->($config, $tempdir, sub {
+    $setup->($config, $tempdir, sub {
         my $versions = $config->{$language} // []; # TODO
 
         # http://about.travis-ci.org/docs/user/build-configuration/#Build-Lifecycle
