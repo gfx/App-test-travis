@@ -2,6 +2,11 @@ Revision history for Perl extension App-test-travis
 
 {{$NEXT}}
 
+v0.9.6 2013-08-16T15:21:04Z
+
+    - Fix an issue that projects with default setup routines did not work
+      (#5, hhatto++)
+
 v0.9.5 2013-08-15T06:49:09Z
 
     - Handle more build lifecycle: after_success, after_failure, after_script
