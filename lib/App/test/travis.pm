@@ -81,7 +81,7 @@ my %tab = (
     },
 
     ruby => {
-        install => 'bundle exec',
+        install => 'bundle install',
         script => 'bundle exec rake',
     },
 
