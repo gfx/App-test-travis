@@ -2,6 +2,10 @@ Revision history for Perl extension App-test-travis
 
 {{$NEXT}}
 
+v0.9.7 2013-10-23T15:40:23Z
+
+    - Fix ruby settings
+
 v0.9.6 2013-08-16T15:21:04Z
 
     - Fix an issue that projects with default setup routines did not work
